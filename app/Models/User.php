@@ -22,6 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'degree_id'
     ];
 
     /**
@@ -43,4 +44,16 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function courseCount(){
+        return Course::where('teacher_id',$this->id)->count();
+    }
+    public function stdData(){
+        return Student::where('user_id',$this->id)->first();
+    }
+    public function stdParent(){
+        return StudentParent::where('user_id',$this->id)->first();
+    }
+    public function degree(){
+        return $this->belongsTo(Degree::class, 'degree_id', 'id');
+    }
 }

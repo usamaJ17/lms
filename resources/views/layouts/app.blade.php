@@ -1,6 +1,6 @@
 <x-laravel-ui-adminlte::adminlte-layout>
-
     <body class="hold-transition sidebar-mini layout-fixed">
+         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
         <div class="wrapper">
             <!-- Main Header -->
             <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -55,10 +55,7 @@
 
             <!-- Main Footer -->
             <footer class="main-footer">
-                <div class="float-right d-none d-sm-block">
-                    <b>Version</b> 3.1.0
-                </div>
-                <strong>Copyright &copy; 2014-2023 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights
+                <strong>Copyright &copy; 2014-2023 <a href="#">Uni</a>.</strong> All rights
                 reserved.
             </footer>
         </div>
