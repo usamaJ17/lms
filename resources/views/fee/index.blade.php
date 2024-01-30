@@ -49,7 +49,7 @@
                                     @foreach ($fee as $de)
                                         <tr>
                                             <td>{{ $loop->index + 1 }}</td>
-                                            <td>{{ $de->course->name }}</td>
+                                            <td>{{ $de->course ? $de->course->name : '-' }}</td>
                                             <td>{{ $de->fee}}</td>
                                             @role('admin')
                                             <td> 

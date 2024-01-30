@@ -46,7 +46,7 @@
                                         <tr>
                                             <td>{{ $loop->index + 1 }}</td>
                                             <td>{{ $de->name }}</td>
-                                            <td>{{ $de->degree->name }}</td>
+                                            <td>{{ $de->degree ? $de->degree->name : '-' }}</td>
                                             <td> 
                                                 <a href="{{ route('student.edit', ['student' => $de]) }}">
                                                     <button class="btn btn-sm btn-outline-warning"><i class="fas fa-edit"></i>&nbsp;Edit</button>

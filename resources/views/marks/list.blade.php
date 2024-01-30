@@ -46,8 +46,8 @@
                                     @foreach ($marks as $de)
                                         <tr>
                                             <td>{{ $loop->index + 1 }}</td>
-                                            <td>{{ $de->student->name }}</td>
-                                            <td>{{ $de->course->name }}</td>
+                                            <td>{{ $de->student ? $de->student->name : '-' }}</td>
+                                            <td>{{ $de->course ? $de->course->name : '-' }}</td>
                                             <td>{{ $de->grade }}</td>
                                             <td> 
                                                 <a href="{{ route('mark.edit', ['mark' => $de]) }}">
