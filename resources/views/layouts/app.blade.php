@@ -1,6 +1,7 @@
 <x-laravel-ui-adminlte::adminlte-layout>
     <body class="hold-transition sidebar-mini layout-fixed">
-         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
         <div class="wrapper">
             <!-- Main Header -->
             <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -59,5 +60,15 @@
                 reserved.
             </footer>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const calendarEl = document.getElementById('calendar')
+              const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+              })
+              calendar.render()
+            })
+      
+          </script>
     </body>
 </x-laravel-ui-adminlte::adminlte-layout>

@@ -47,6 +47,22 @@
 @endcan
 @can('view course')
 <li class="nav-item">
+    <a href="{{ route('fee.index') }}" class="nav-link {{ Request::is('fee') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-money-bill-wave"></i>
+        <p>Fee</p>
+    </a>
+</li>
+@endcan
+@role('student')
+<li class="nav-item">
+    <a href="{{ route('fee.index') }}" class="nav-link {{ Request::is('fee') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-money-bill-wave"></i>
+        <p>Fee</p>
+    </a>
+</li>
+@endrole
+@can('view course')
+<li class="nav-item">
     <a href="{{ route('email') }}" class="nav-link {{ Request::is('email') ? 'active' : '' }}">
         <i class="nav-icon fas fa-envelope"></i>
         <p>Email</p>
