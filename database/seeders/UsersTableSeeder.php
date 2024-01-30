@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 1,
-                'name' => 'usama',
+                'name' => 'Admin',
                 'email' => 'admin@lms.com',
                 'email_verified_at' => NULL,
                 'password' => '$2a$12$Dmx77y0aU/t0Tl37kCS1ae1GXmW/FJ2V6yVsW5aELy7DXGkkYg49W',
